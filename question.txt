@@ -1,0 +1,783 @@
+Test project /home/liuhongxiu/CS144/minnow/build
+    Start 1: compile with bug-checkers
+1/2 Test #1: compile with bug-checkers ........***Failed    1.22 sec
+make[4]: 警告: 子 make 中强制 -j16: 重置 jobserver 模式。
+[ 24%] Built target minnow_sanitized
+[ 24%] Built target minnow_testing_debug
+[ 25%] Built target minnow_debug
+[ 29%] Built target util_sanitized
+[ 33%] Built target minnow_testing_sanitized
+[ 48%] Built target util_debug
+[ 51%] Building CXX object tests/CMakeFiles/byte_stream_two_writes_sanitized.dir/byte_stream_two_writes.cc.o
+[ 53%] Built target no_skip_sanitized
+[ 55%] Building CXX object tests/CMakeFiles/byte_stream_capacity_sanitized.dir/byte_stream_capacity.cc.o
+[ 57%] Building CXX object tests/CMakeFiles/byte_stream_stress_test_sanitized.dir/byte_stream_stress_test.cc.o
+[ 59%] Building CXX object tests/CMakeFiles/byte_stream_basics_sanitized.dir/byte_stream_basics.cc.o
+[ 61%] Building CXX object tests/CMakeFiles/byte_stream_many_writes_sanitized.dir/byte_stream_many_writes.cc.o
+[ 62%] Building CXX object tests/CMakeFiles/byte_stream_one_write_sanitized.dir/byte_stream_one_write.cc.o
+[ 66%] Built target no_skip
+[ 68%] Building CXX object tests/CMakeFiles/byte_stream_two_writes.dir/byte_stream_two_writes.cc.o
+[ 70%] Building CXX object tests/CMakeFiles/byte_stream_one_write.dir/byte_stream_one_write.cc.o
+[ 72%] Building CXX object tests/CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.o
+[ 77%] Building CXX object tests/CMakeFiles/byte_stream_many_writes.dir/byte_stream_many_writes.cc.o
+[ 74%] Building CXX object tests/CMakeFiles/byte_stream_stress_test.dir/byte_stream_stress_test.cc.o
+[ 77%] Building CXX object tests/CMakeFiles/byte_stream_basics.dir/byte_stream_basics.cc.o
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_capacity.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Push::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:34:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Push::obj() const’
+   34 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+In file included from /usr/include/c++/11/string:55,
+                 from /home/liuhongxiu/CS144/minnow/src/byte_stream.hh:4,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:3,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_capacity.cc:1:
+/usr/include/c++/11/bits/basic_string.h:85:11: note: ‘std::__cxx11::basic_string<char>’ is not literal because:
+   85 |     class basic_string
+      |           ^~~~~~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:85:11: note:   ‘std::__cxx11::basic_string<char>’ does not have ‘constexpr’ destructor
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_capacity.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Close::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:41:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Close::obj() const’
+   41 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Pop::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:57:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Pop::obj() const’
+   57 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Peek::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:103:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Peek::obj() const’
+  103 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsClosed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:127:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsClosed::obj() const’
+  127 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsFinished::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:135:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsFinished::obj() const’
+  135 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesBuffered::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:150:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesBuffered::obj() const’
+  150 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BufferEmpty::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:158:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BufferEmpty::obj() const’
+  158 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string AvailableCapacity::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:166:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string AvailableCapacity::obj() const’
+  166 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPushed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:174:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPushed::obj() const’
+  174 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPopped::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:182:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPopped::obj() const’
+  182 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string ReadAll::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:211:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string ReadAll::obj() const’
+  211 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_stress_test.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Push::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:34:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Push::obj() const’
+   34 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+In file included from /usr/include/c++/11/string:55,
+                 from /home/liuhongxiu/CS144/minnow/src/byte_stream.hh:4,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:3,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_stress_test.cc:1:
+/usr/include/c++/11/bits/basic_string.h:85:11: note: ‘std::__cxx11::basic_string<char>’ is not literal because:
+   85 |     class basic_string
+      |           ^~~~~~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:85:11: note:   ‘std::__cxx11::basic_string<char>’ does not have ‘constexpr’ destructor
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_stress_test.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Close::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:41:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Close::obj() const’
+   41 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Pop::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:57:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Pop::obj() const’
+   57 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Peek::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:103:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Peek::obj() const’
+  103 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsClosed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:127:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsClosed::obj() const’
+  127 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsFinished::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:135:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsFinished::obj() const’
+  135 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesBuffered::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:150:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesBuffered::obj() const’
+  150 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BufferEmpty::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:158:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BufferEmpty::obj() const’
+  158 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string AvailableCapacity::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:166:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string AvailableCapacity::obj() const’
+  166 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPushed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:174:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPushed::obj() const’
+  174 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPopped::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:182:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPopped::obj() const’
+  182 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_two_writes.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Push::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:34:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Push::obj() const’
+   34 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+In file included from /usr/include/c++/11/string:55,
+                 from /home/liuhongxiu/CS144/minnow/src/byte_stream.hh:4,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:3,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_two_writes.cc:1:
+/usr/include/c++/11/bits/basic_string.h:85:11: note: ‘std::__cxx11::basic_string<char>’ is not literal because:
+   85 |     class basic_string
+      |           ^~~~~~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:85:11: note:   ‘std::__cxx11::basic_string<char>’ does not have ‘constexpr’ destructor
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_two_writes.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Close::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:41:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Close::obj() const’
+   41 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string ReadAll::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:211:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string ReadAll::obj() const’
+  211 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Pop::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:57:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Pop::obj() const’
+   57 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Peek::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:103:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Peek::obj() const’
+  103 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsClosed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:127:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsClosed::obj() const’
+  127 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsFinished::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:135:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsFinished::obj() const’
+  135 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesBuffered::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:150:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesBuffered::obj() const’
+  150 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BufferEmpty::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:158:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BufferEmpty::obj() const’
+  158 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string AvailableCapacity::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:166:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string AvailableCapacity::obj() const’
+  166 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPushed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:174:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPushed::obj() const’
+  174 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPopped::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:182:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPopped::obj() const’
+  182 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string ReadAll::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:211:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string ReadAll::obj() const’
+  211 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-unqualified-std-cast-call’ may have been intended to silence earlier diagnostics
+make[7]: *** [tests/CMakeFiles/byte_stream_capacity.dir/build.make:79：tests/CMakeFiles/byte_stream_capacity.dir/byte_stream_capacity.cc.o] 错误 1
+make[6]: *** [CMakeFiles/Makefile2:3236：tests/CMakeFiles/byte_stream_capacity.dir/all] 错误 2
+make[6]: *** 正在等待未完成的任务....
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-unqualified-std-cast-call’ may have been intended to silence earlier diagnostics
+make[7]: *** [tests/CMakeFiles/byte_stream_two_writes_sanitized.dir/build.make:79：tests/CMakeFiles/byte_stream_two_writes_sanitized.dir/byte_stream_two_writes.cc.o] 错误 1
+make[6]: *** [CMakeFiles/Makefile2:3338：tests/CMakeFiles/byte_stream_two_writes_sanitized.dir/all] 错误 2
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_one_write.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Push::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:34:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Push::obj() const’
+   34 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+In file included from /usr/include/c++/11/string:55,
+                 from /home/liuhongxiu/CS144/minnow/src/byte_stream.hh:4,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:3,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_one_write.cc:1:
+/usr/include/c++/11/bits/basic_string.h:85:11: note: ‘std::__cxx11::basic_string<char>’ is not literal because:
+   85 |     class basic_string
+      |           ^~~~~~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:85:11: note:   ‘std::__cxx11::basic_string<char>’ does not have ‘constexpr’ destructor
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_one_write.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Close::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:41:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Close::obj() const’
+   41 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Pop::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:57:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Pop::obj() const’
+   57 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Peek::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:103:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Peek::obj() const’
+  103 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsClosed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:127:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsClosed::obj() const’
+  127 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsFinished::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:135:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsFinished::obj() const’
+  135 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesBuffered::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:150:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesBuffered::obj() const’
+  150 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BufferEmpty::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:158:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BufferEmpty::obj() const’
+  158 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string AvailableCapacity::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:166:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string AvailableCapacity::obj() const’
+  166 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPushed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:174:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPushed::obj() const’
+  174 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPopped::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:182:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPopped::obj() const’
+  182 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string ReadAll::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:211:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string ReadAll::obj() const’
+  211 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-unqualified-std-cast-call’ may have been intended to silence earlier diagnostics
+make[7]: *** [tests/CMakeFiles/byte_stream_stress_test_sanitized.dir/build.make:79：tests/CMakeFiles/byte_stream_stress_test_sanitized.dir/byte_stream_stress_test.cc.o] 错误 1
+make[6]: *** [CMakeFiles/Makefile2:3474：tests/CMakeFiles/byte_stream_stress_test_sanitized.dir/all] 错误 2
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_one_write.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Push::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:34:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Push::obj() const’
+   34 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+In file included from /usr/include/c++/11/string:55,
+                 from /home/liuhongxiu/CS144/minnow/src/byte_stream.hh:4,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:3,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_one_write.cc:1:
+/usr/include/c++/11/bits/basic_string.h:85:11: note: ‘std::__cxx11::basic_string<char>’ is not literal because:
+   85 |     class basic_string
+      |           ^~~~~~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:85:11: note:   ‘std::__cxx11::basic_string<char>’ does not have ‘constexpr’ destructor
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_one_write.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Close::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:41:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Close::obj() const’
+   41 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Pop::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:57:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Pop::obj() const’
+   57 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Peek::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:103:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Peek::obj() const’
+  103 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsClosed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:127:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsClosed::obj() const’
+  127 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsFinished::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:135:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsFinished::obj() const’
+  135 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesBuffered::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:150:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesBuffered::obj() const’
+  150 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BufferEmpty::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:158:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BufferEmpty::obj() const’
+  158 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string AvailableCapacity::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:166:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string AvailableCapacity::obj() const’
+  166 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPushed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:174:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPushed::obj() const’
+  174 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPopped::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:182:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPopped::obj() const’
+  182 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string ReadAll::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:211:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string ReadAll::obj() const’
+  211 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-unqualified-std-cast-call’ may have been intended to silence earlier diagnostics
+make[7]: *** [tests/CMakeFiles/byte_stream_one_write_sanitized.dir/build.make:79：tests/CMakeFiles/byte_stream_one_write_sanitized.dir/byte_stream_one_write.cc.o] 错误 1
+make[6]: *** [CMakeFiles/Makefile2:3270：tests/CMakeFiles/byte_stream_one_write_sanitized.dir/all] 错误 2
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_capacity.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Push::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:34:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Push::obj() const’
+   34 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+In file included from /usr/include/c++/11/string:55,
+                 from /home/liuhongxiu/CS144/minnow/src/byte_stream.hh:4,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:3,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_capacity.cc:1:
+/usr/include/c++/11/bits/basic_string.h:85:11: note: ‘std::__cxx11::basic_string<char>’ is not literal because:
+   85 |     class basic_string
+      |           ^~~~~~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:85:11: note:   ‘std::__cxx11::basic_string<char>’ does not have ‘constexpr’ destructor
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_capacity.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Close::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:41:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Close::obj() const’
+   41 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Pop::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:57:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Pop::obj() const’
+   57 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Peek::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:103:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Peek::obj() const’
+  103 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsClosed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:127:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsClosed::obj() const’
+  127 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsFinished::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:135:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsFinished::obj() const’
+  135 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesBuffered::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:150:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesBuffered::obj() const’
+  150 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_basics.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Push::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:34:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Push::obj() const’
+   34 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BufferEmpty::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:158:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BufferEmpty::obj() const’
+  158 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+In file included from /usr/include/c++/11/string:55,
+                 from /home/liuhongxiu/CS144/minnow/src/byte_stream.hh:4,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:3,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_basics.cc:1:
+/usr/include/c++/11/bits/basic_string.h:85:11: note: ‘std::__cxx11::basic_string<char>’ is not literal because:
+   85 |     class basic_string
+      |           ^~~~~~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:85:11: note:   ‘std::__cxx11::basic_string<char>’ does not have ‘constexpr’ destructor
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string AvailableCapacity::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:166:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string AvailableCapacity::obj() const’
+  166 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_basics.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Close::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:41:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Close::obj() const’
+   41 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPushed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:174:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPushed::obj() const’
+  174 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPopped::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:182:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPopped::obj() const’
+  182 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Pop::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:57:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Pop::obj() const’
+   57 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string ReadAll::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:211:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string ReadAll::obj() const’
+  211 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Peek::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:103:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Peek::obj() const’
+  103 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsClosed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:127:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsClosed::obj() const’
+  127 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsFinished::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:135:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsFinished::obj() const’
+  135 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesBuffered::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:150:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesBuffered::obj() const’
+  150 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BufferEmpty::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:158:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BufferEmpty::obj() const’
+  158 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string AvailableCapacity::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:166:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string AvailableCapacity::obj() const’
+  166 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPushed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:174:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPushed::obj() const’
+  174 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPopped::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:182:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPopped::obj() const’
+  182 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string ReadAll::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:211:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string ReadAll::obj() const’
+  211 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_two_writes.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Push::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:34:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Push::obj() const’
+   34 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+In file included from /usr/include/c++/11/string:55,
+                 from /home/liuhongxiu/CS144/minnow/src/byte_stream.hh:4,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:3,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_two_writes.cc:1:
+/usr/include/c++/11/bits/basic_string.h:85:11: note: ‘std::__cxx11::basic_string<char>’ is not literal because:
+   85 |     class basic_string
+      |           ^~~~~~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:85:11: note:   ‘std::__cxx11::basic_string<char>’ does not have ‘constexpr’ destructor
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_basics.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Push::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:34:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Push::obj() const’
+   34 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+In file included from /usr/include/c++/11/string:55,
+                 from /home/liuhongxiu/CS144/minnow/src/byte_stream.hh:4,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:3,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_basics.cc:1:
+/usr/include/c++/11/bits/basic_string.h:85:11: note: ‘std::__cxx11::basic_string<char>’ is not literal because:
+   85 |     class basic_string
+      |           ^~~~~~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:85:11: note:   ‘std::__cxx11::basic_string<char>’ does not have ‘constexpr’ destructor
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_two_writes.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Close::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:41:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Close::obj() const’
+   41 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_basics.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Close::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:41:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Close::obj() const’
+   41 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Pop::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:57:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Pop::obj() const’
+   57 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Pop::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:57:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Pop::obj() const’
+   57 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-unqualified-std-cast-call’ may have been intended to silence earlier diagnostics
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Peek::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:103:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Peek::obj() const’
+  103 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Peek::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:103:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Peek::obj() const’
+  103 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsClosed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:127:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsClosed::obj() const’
+  127 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsFinished::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:135:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsFinished::obj() const’
+  135 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsClosed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:127:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsClosed::obj() const’
+  127 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesBuffered::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:150:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesBuffered::obj() const’
+  150 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsFinished::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:135:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsFinished::obj() const’
+  135 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BufferEmpty::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:158:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BufferEmpty::obj() const’
+  158 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+make[7]: *** [tests/CMakeFiles/byte_stream_one_write.dir/build.make:79：tests/CMakeFiles/byte_stream_one_write.dir/byte_stream_one_write.cc.o] 错误 1
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string AvailableCapacity::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:166:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string AvailableCapacity::obj() const’
+  166 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+make[6]: *** [CMakeFiles/Makefile2:3304：tests/CMakeFiles/byte_stream_one_write.dir/all] 错误 2
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesBuffered::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:150:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesBuffered::obj() const’
+  150 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPushed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:174:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPushed::obj() const’
+  174 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BufferEmpty::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:158:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BufferEmpty::obj() const’
+  158 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPopped::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:182:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPopped::obj() const’
+  182 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string AvailableCapacity::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:166:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string AvailableCapacity::obj() const’
+  166 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPushed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:174:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPushed::obj() const’
+  174 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPopped::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:182:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPopped::obj() const’
+  182 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string ReadAll::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:211:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string ReadAll::obj() const’
+  211 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_many_writes.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Push::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:34:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Push::obj() const’
+   34 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+In file included from /usr/include/c++/11/string:55,
+                 from /home/liuhongxiu/CS144/minnow/src/byte_stream.hh:4,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:3,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_many_writes.cc:1:
+/usr/include/c++/11/bits/basic_string.h:85:11: note: ‘std::__cxx11::basic_string<char>’ is not literal because:
+   85 |     class basic_string
+      |           ^~~~~~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:85:11: note:   ‘std::__cxx11::basic_string<char>’ does not have ‘constexpr’ destructor
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string ReadAll::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:211:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string ReadAll::obj() const’
+  211 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_many_writes.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Close::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:41:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Close::obj() const’
+   41 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Pop::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:57:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Pop::obj() const’
+   57 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Peek::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:103:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Peek::obj() const’
+  103 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsClosed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:127:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsClosed::obj() const’
+  127 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsFinished::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:135:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsFinished::obj() const’
+  135 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesBuffered::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:150:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesBuffered::obj() const’
+  150 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BufferEmpty::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:158:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BufferEmpty::obj() const’
+  158 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string AvailableCapacity::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:166:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string AvailableCapacity::obj() const’
+  166 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPushed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:174:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPushed::obj() const’
+  174 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPopped::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:182:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPopped::obj() const’
+  182 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string ReadAll::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:211:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string ReadAll::obj() const’
+  211 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_many_writes.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Push::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:34:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Push::obj() const’
+   34 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+In file included from /usr/include/c++/11/string:55,
+                 from /home/liuhongxiu/CS144/minnow/src/byte_stream.hh:4,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:3,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_many_writes.cc:1:
+/usr/include/c++/11/bits/basic_string.h:85:11: note: ‘std::__cxx11::basic_string<char>’ is not literal because:
+   85 |     class basic_string
+      |           ^~~~~~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:85:11: note:   ‘std::__cxx11::basic_string<char>’ does not have ‘constexpr’ destructor
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_many_writes.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Close::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:41:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Close::obj() const’
+   41 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Pop::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:57:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Pop::obj() const’
+   57 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Peek::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:103:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Peek::obj() const’
+  103 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsClosed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:127:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsClosed::obj() const’
+  127 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsFinished::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:135:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsFinished::obj() const’
+  135 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesBuffered::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:150:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesBuffered::obj() const’
+  150 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BufferEmpty::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:158:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BufferEmpty::obj() const’
+  158 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string AvailableCapacity::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:166:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string AvailableCapacity::obj() const’
+  166 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPushed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:174:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPushed::obj() const’
+  174 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPopped::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:182:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPopped::obj() const’
+  182 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string ReadAll::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:211:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string ReadAll::obj() const’
+  211 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-unqualified-std-cast-call’ may have been intended to silence earlier diagnostics
+make[7]: *** [tests/CMakeFiles/byte_stream_basics.dir/build.make:79：tests/CMakeFiles/byte_stream_basics.dir/byte_stream_basics.cc.o] 错误 1
+make[6]: *** [CMakeFiles/Makefile2:3168：tests/CMakeFiles/byte_stream_basics.dir/all] 错误 2
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_stress_test.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Push::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:34:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Push::obj() const’
+   34 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+In file included from /usr/include/c++/11/string:55,
+                 from /home/liuhongxiu/CS144/minnow/src/byte_stream.hh:4,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:3,
+                 from /home/liuhongxiu/CS144/minnow/tests/byte_stream_stress_test.cc:1:
+/usr/include/c++/11/bits/basic_string.h:85:11: note: ‘std::__cxx11::basic_string<char>’ is not literal because:
+   85 |     class basic_string
+      |           ^~~~~~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:85:11: note:   ‘std::__cxx11::basic_string<char>’ does not have ‘constexpr’ destructor
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-unqualified-std-cast-call’ may have been intended to silence earlier diagnostics
+In file included from /home/liuhongxiu/CS144/minnow/tests/byte_stream_stress_test.cc:1:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Close::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:41:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Close::obj() const’
+   41 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Pop::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:57:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Pop::obj() const’
+   57 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string Peek::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:103:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string Peek::obj() const’
+  103 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+make[7]: *** [tests/CMakeFiles/byte_stream_capacity_sanitized.dir/build.make:79：tests/CMakeFiles/byte_stream_capacity_sanitized.dir/byte_stream_capacity.cc.o] 错误 1
+make[6]: *** [CMakeFiles/Makefile2:3202：tests/CMakeFiles/byte_stream_capacity_sanitized.dir/all] 错误 2
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsClosed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:127:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsClosed::obj() const’
+  127 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string IsFinished::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:135:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string IsFinished::obj() const’
+  135 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesBuffered::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:150:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesBuffered::obj() const’
+  150 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BufferEmpty::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:158:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BufferEmpty::obj() const’
+  158 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string AvailableCapacity::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:166:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string AvailableCapacity::obj() const’
+  166 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPushed::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:174:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPushed::obj() const’
+  174 |   constexpr std::string obj() const override { return "Writer"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string BytesPopped::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:182:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string BytesPopped::obj() const’
+  182 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh: In member function ‘virtual constexpr std::string ReadAll::obj() const’:
+/home/liuhongxiu/CS144/minnow/tests/byte_stream_test_harness.hh:211:25: error: invalid return type ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} of ‘constexpr’ function ‘virtual constexpr std::string ReadAll::obj() const’
+  211 |   constexpr std::string obj() const override { return "Reader"; }
+      |                         ^~~
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-unqualified-std-cast-call’ may have been intended to silence earlier diagnostics
+make[7]: *** [tests/CMakeFiles/byte_stream_two_writes.dir/build.make:79：tests/CMakeFiles/byte_stream_two_writes.dir/byte_stream_two_writes.cc.o] 错误 1
+make[6]: *** [CMakeFiles/Makefile2:3372：tests/CMakeFiles/byte_stream_two_writes.dir/all] 错误 2
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-unqualified-std-cast-call’ may have been intended to silence earlier diagnostics
+make[7]: *** [tests/CMakeFiles/byte_stream_basics_sanitized.dir/build.make:79：tests/CMakeFiles/byte_stream_basics_sanitized.dir/byte_stream_basics.cc.o] 错误 1
+make[6]: *** [CMakeFiles/Makefile2:3134：tests/CMakeFiles/byte_stream_basics_sanitized.dir/all] 错误 2
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-unqualified-std-cast-call’ may have been intended to silence earlier diagnostics
+make[7]: *** [tests/CMakeFiles/byte_stream_many_writes.dir/build.make:79：tests/CMakeFiles/byte_stream_many_writes.dir/byte_stream_many_writes.cc.o] 错误 1
+make[6]: *** [CMakeFiles/Makefile2:3440：tests/CMakeFiles/byte_stream_many_writes.dir/all] 错误 2
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-unqualified-std-cast-call’ may have been intended to silence earlier diagnostics
+make[7]: *** [tests/CMakeFiles/byte_stream_stress_test.dir/build.make:79：tests/CMakeFiles/byte_stream_stress_test.dir/byte_stream_stress_test.cc.o] 错误 1
+make[6]: *** [CMakeFiles/Makefile2:3508：tests/CMakeFiles/byte_stream_stress_test.dir/all] 错误 2
+At global scope:
+cc1plus: note: unrecognized command-line option ‘-Wno-unqualified-std-cast-call’ may have been intended to silence earlier diagnostics
+make[7]: *** [tests/CMakeFiles/byte_stream_many_writes_sanitized.dir/build.make:79：tests/CMakeFiles/byte_stream_many_writes_sanitized.dir/byte_stream_many_writes.cc.o] 错误 1
+make[6]: *** [CMakeFiles/Makefile2:3406：tests/CMakeFiles/byte_stream_many_writes_sanitized.dir/all] 错误 2
+make[5]: *** [CMakeFiles/Makefile2:3062：tests/CMakeFiles/functionality_testing.dir/rule] 错误 2
+make[4]: *** [Makefile:1226：functionality_testing] 错误 2
+
+    Start 2: t_webget
+Failed test dependencies: compile with bug-checkers
+2/2 Test #2: t_webget .........................***Not Run   0.00 sec
+
+0% tests passed, 2 tests failed out of 2
+
+Total Test time (real) =   1.22 sec
+
+The following tests FAILED:
+	  1 - compile with bug-checkers (Failed)
+	  2 - t_webget (Not Run)
