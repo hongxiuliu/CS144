@@ -1,9 +1,9 @@
 #pragma once
 
+#include <deque>
 #include <stdint.h>
 #include <string>
 #include <string_view>
-#include<deque>
 using namespace std;
 class Reader;
 class Writer;
@@ -21,16 +21,15 @@ public:
 
   void set_error() { error_ = true; };       // Signal that the stream suffered an error.
   bool has_error() const { return error_; }; // Has the stream had an error?
-  bool input_end=false;
+  bool input_end = false;
   uint64_t number_pushed = 0; // 记录已经push的字节数
   uint64_t number_popped = 0; // 记录已经pop的字节数
   std::deque<char> buffer;
+  uint64_t capacity_;
+
 protected:
   // Please add any additional state to the ByteStream here, and not to the Writer and Reader interfaces.
-  
-  uint64_t capacity_;
   bool error_ {};
- 
 };
 
 class Writer : public ByteStream

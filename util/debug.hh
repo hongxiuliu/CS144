@@ -6,7 +6,7 @@
 void debug_str( std::string_view message );
 
 template<typename... Args>
-void debug( std::format_string<Args...> fmt [[maybe_unused]], Args&&... args [[maybe_unused]] )
+void debug( fmt::v8::format_string<Args...> fmt [[maybe_unused]], Args&&... args [[maybe_unused]] )
 {
 #ifndef NDEBUG
   debug_str( fmt::format( fmt, std::forward<Args>( args )... ) );
